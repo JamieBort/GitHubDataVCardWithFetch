@@ -13,5 +13,5 @@ Pick one of your projects and replace the XMLHttpRequest with the fetch API.
 If you have some extra time, continue playing with the [GitHub API](https://developer.github.com/v3/) and see what other endpoints you can access without authentication.
 
 
-## Comment: 
+## Comment
 Not finished. I want to come back to this to play with the api some more. Also, the styles need to be changed before deleting the 'old' directory.
