@@ -8,25 +8,17 @@ fetch("https://api.github.com/users/jamiebort")
         console.log(response.status);
         return;
       }
-      response.json().then(function displayGitHubInfo() {
-
-          let data = JSON.parse(this.responseText);
-
-          document.getElementById('name').innerHTML = `Name: ` + data.name;
-
-          document.getElementById('url').innerHTML = `URL: ` + data.url;
-
-          document.getElementById('email').innerHTML = `Email: ` + data.email;
-
-          document.getElementById('company').innerHTML = `Company: ` + data.company;
-
-          document.getElementById('blog').innerHTML = `Website: ` + data.blog;
-
-          document.getElementById('bio').innerHTML = data.bio;
-        });
-
-}
-)
-.catch(function(err) {
-  console.log("Fetch Error :-S", err);
-});
+      response.json().then(function(data) {
+        // console.log("Here is the data:", data);
+        document.getElementById('name').innerHTML = `Name: ` + data.name;
+        document.getElementById('url').innerHTML = `URL: ` + data.url;
+        document.getElementById('email').innerHTML = `Email: ` + data.email;
+        document.getElementById('company').innerHTML = `Company: ` + data.company;
+        document.getElementById('blog').innerHTML = `Website: ` + data.blog;
+        document.getElementById('bio').innerHTML = data.bio;
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log("Fetch Error :-S", err);
+  });
